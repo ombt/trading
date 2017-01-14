@@ -1,0 +1,76 @@
+#
+# Copyright (C) 2017, OMBT LLC and Mike A. Rumore
+# All rights reserved.
+# Contact: Mike A. Rumore, (mike.a.rumore@gmail.com)
+#
+export OMBT_ANALYTICS_BASE=$(pwd)
+#
+export OMBT_CSV_BASE_PATH=${OMBT_ANALYTICS_BASE}/../csv
+export OMBT_DB_BASE_PATH=${OMBT_ANALYTICS_BASE}/../db
+export OMBT_HW_BASE_PATH=${OMBT_ANALYTICS_BASE}/hw
+export OMBT_RAW_BASE_PATH=${OMBT_ANALYTICS_BASE}/../raw
+export OMBT_RDATA_BASE_PATH=${OMBT_ANALYTICS_BASE}/../rdata
+export OMBT_STATISTICS_BASE_PATH=${OMBT_ANALYTICS_BASE}/../statistics
+export OMBT_PROCESS_CONTROL_BASE_PATH=${OMBT_ANALYTICS_BASE}/../process_control
+export OMBT_OMBT_BASE_PATH=${OMBT_ANALYTICS_BASE}/../ombt
+export OMBT_TRADING_BASE_PATH=${OMBT_ANALYTICS_BASE}/../trading
+#
+PATH="${OMBT_ANALYTICS_BASE}/bin:${PATH}"
+#
+cdbase ()
+{
+    cd $OMBT_ANALYTICS_BASE "${@}"
+    pwd
+}
+cdroot ()
+{
+    cd $OMBT_ANALYTICS_BASE "${@}"
+    pwd
+}
+cddb ()
+{
+    cd $OMBT_DB_BASE_PATH "${@}"
+    pwd
+}
+cdcsv ()
+{
+    cd $OMBT_CSV_BASE_PATH "${@}"
+    pwd
+}
+cdraw ()
+{
+    cd $OMBT_RAW_BASE_PATH "${@}"
+    pwd
+}
+cdrdata ()
+{
+    cd $OMBT_RDATA_BASE_PATH "${@}"
+    pwd
+}
+cdhw ()
+{
+    cd $OMBT_HW_BASE_PATH "${@}"
+    pwd
+}
+cdstats ()
+{
+    cd $OMBT_STATISTICS_BASE_PATH "${@}"
+    pwd
+}
+cdpc ()
+{
+    cd $OMBT_PROCESS_CONTROL_BASE_PATH "${@}"
+    pwd
+}
+cdombt ()
+{
+    cd $OMBT_OMBT_BASE_PATH "${@}"
+    pwd
+}
+cdtrade ()
+{
+    cd $OMBT_TRADING_BASE_PATH "${@}"
+    pwd
+}
+
+
