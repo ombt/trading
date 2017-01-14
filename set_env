@@ -3,28 +3,35 @@
 # All rights reserved.
 # Contact: Mike A. Rumore, (mike.a.rumore@gmail.com)
 #
-export OMBT_ANALYTICS_BASE=$(pwd)
+export OMBT_TRADING_BASE_PATH=$(pwd)
 #
-export OMBT_CSV_BASE_PATH=${OMBT_ANALYTICS_BASE}/../csv
-export OMBT_DB_BASE_PATH=${OMBT_ANALYTICS_BASE}/../db
-export OMBT_HW_BASE_PATH=${OMBT_ANALYTICS_BASE}/hw
-export OMBT_RAW_BASE_PATH=${OMBT_ANALYTICS_BASE}/../raw
-export OMBT_RDATA_BASE_PATH=${OMBT_ANALYTICS_BASE}/../rdata
-export OMBT_STATISTICS_BASE_PATH=${OMBT_ANALYTICS_BASE}/../statistics
-export OMBT_PROCESS_CONTROL_BASE_PATH=${OMBT_ANALYTICS_BASE}/../process_control
-export OMBT_OMBT_BASE_PATH=${OMBT_ANALYTICS_BASE}/../ombt
-export OMBT_TRADING_BASE_PATH=${OMBT_ANALYTICS_BASE}/../trading
+export OMBT_ANALYTICS_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../analytics
+export OMBT_CSV_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../csv
+export OMBT_DB_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../db
+export OMBT_HW_BASE_PATH=${OMBT_TRADING_BASE_PATH}/hw
+export OMBT_RAW_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../raw
+export OMBT_RDATA_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../rdata
+export OMBT_STATISTICS_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../statistics
+export OMBT_PROCESS_CONTROL_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../process_control
+export OMBT_OMBT_BASE_PATH=${OMBT_TRADING_BASE_PATH}/../ombt
 #
-PATH="${OMBT_ANALYTICS_BASE}/bin:${PATH}"
+export ROOT=$OMBT_TRADING_BASE_PATH
+#
+PATH="${OMBT_TRADING_BASE_PATH}/bin:${PATH}"
 #
 cdbase ()
 {
-    cd $OMBT_ANALYTICS_BASE "${@}"
+    cd $OMBT_TRADING_BASE_PATH "${@}"
     pwd
 }
 cdroot ()
 {
-    cd $OMBT_ANALYTICS_BASE "${@}"
+    cd $OMBT_TRADING_BASE_PATH "${@}"
+    pwd
+}
+cdanal ()
+{
+    cd $OMBT_ANALYTICS_BASE_PATH "${@}"
     pwd
 }
 cddb ()
